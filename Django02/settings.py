@@ -18,6 +18,8 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'day06',
+    'form01',
+
 ]
 
 MIDDLEWARE = [
@@ -60,8 +62,8 @@ DATABASES = {
         'ENGINE': 'django.db.backends.mysql',
         'NAME': 'django',
         'USER': 'root',
-        'PASSWORD': '123456',
-        'HOST': '192.168.51.115',
+        'PASSWORD': 'root',
+        'HOST': 'localhost',
         'PORT': '3306',
         'CHARSET': 'utf8'
     }

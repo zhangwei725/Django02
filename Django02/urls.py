@@ -10,5 +10,6 @@ urlpatterns = [
     url('admin/', admin.site.urls),
     url(r'^$', views.index),
     url(r'^day06/', include('day06.urls')),
+    url(r'^form/', include('form01.urls')),
 
 ]

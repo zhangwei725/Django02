@@ -66,6 +66,8 @@ class UploadFile(View):
 
 def upload(request):
     if request.method == 'POST':
+        for value in request.FILES.get('head'):
+            print(value)
         username = request.POST.get('username')
         password = request.POST.get('password')
         user = UserInfo()

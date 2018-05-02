@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Django-Form</title>
+</head>
+<body>
+{#/form/test/#}
+<form action="{% url 'test' %}" method="get">
+    {{ form }}
+    <input type="submit" value="提交">
+</form>
+
+
+<!--
+<form action="/xxx" method="post" enctype="multipart/form-data">
+    <label for="uname">用户名</label>
+    <input id="uname" type="text" name="username">
+    <label for="pwd">密码</label>
+    <input id="pwd" type="password" name="password">
+
+    <input type="checkbox" name="like" value="1">
+    <input type="checkbox" name="like" value="2">
+    <input type="checkbox" name="like" value="3">
+    性别<input type="radio" name="sex" value="1">男
+    <input type="radio" name="sex" value="2">女
+    <input type="file" multiple name="file">
+    <input type="email" name="email">
+    <input type="datetime-local">
+    <textarea rows="10" cols="30">
+
+    </textarea>
+    <select>
+        <option>2018-11-23</option>
+        <option>2018-11-23</option>
+        <option>2018-11-23</option>
+        <option>2018-11-23</option>
+    </select>
+
+    <input type="button" value="提交">
+    <input type="reset" value="重置">
+    <input type="image" name="img">
+
+</form>
+-->
+
+</body>
+</html>

@@ -111,3 +111,5 @@ venv.bak/
 将删除 day06/migrations/
 将删除 media/
 将删除 venv/
+将删除 day06/migrations/0001_initial.py
+将删除 day06/migrations/__init__.py
