@@ -19,7 +19,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'day06',
     'form01',
-
+    'session1',
 ]
 
 MIDDLEWARE = [
