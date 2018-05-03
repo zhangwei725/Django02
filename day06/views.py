@@ -2,7 +2,7 @@ from datetime import datetime
 
 from django.contrib.auth.models import User
 from django.shortcuts import render
-from django.views import View
+from django.views.generic.base import View
 
 from Django02 import settings
 from day06.models import UserInfo

@@ -12,5 +12,6 @@ urlpatterns = [
     url(r'^day06/', include('day06.urls')),
     url(r'^form/', include('form01.urls')),
     url(r'^session1/', include('session1.urls')),
+    url(r'^md/', include('middleware01.urls')),
 
 ]
