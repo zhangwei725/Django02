@@ -5,14 +5,12 @@
     <title>Django-Form</title>
 </head>
 <body>
-{#/form/test/#}
+
 <form action="{% url 'test' %}" method="get">
     {{ form }}
     <input type="submit" value="提交">
 </form>
 
-
-{#<!--#}
 <form action="/xxx" method="post" enctype="multipart/form-data">
     <label for="uname">用户名</label>
     <input id="uname" type="text" name="username" placeholder="请输入用户名">

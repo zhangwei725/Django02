@@ -21,6 +21,8 @@ INSTALLED_APPS = [
     'form01',
     'session1',
     'middleware01',
+    'auth01',
+    'captcha',
 ]
 
 MIDDLEWARE_CLASSES = [
@@ -31,8 +33,9 @@ MIDDLEWARE_CLASSES = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
-    'middleware01.middleware.Middle1',
-    'middleware01.middleware.Middle2',
+    # 'middleware01.middleware.Middle1',
+    # 'middleware01.middleware.Middle2',
+    # 'middleware01.middleware.M01',
 
 ]
 
@@ -124,3 +127,16 @@ SESSION_COOKIE_DOMAIN = None
 SESSION_COOKIE_AGE = 1 * 24 * 60 * 60  # 默认的时间是2周
 SESSION_EXPIRE_BROWSER_CLOSE = False  # 浏览器关闭session失效
 SESSION_SAVE_EVERY_REQUEST = False  # 30分钟以内没有请求服务器 session也会失效
+
+# 验证全局配置
+# 验证码图片的大小
+CAPTCHA_IMAGE_SIZE = (100, 30)
+# 背景颜色
+CAPTCHA_BACKGROUND_COLOR = '#ffffff'
+# 验证方式  数学表达式   字母
+# CAPTCHA_CHALLENGE_FUNCT = 'captcha.helpers.random_char_challenge'
+CAPTCHA_CHALLENGE_FUNCT = 'captcha.helpers.math_challenge'
+# 长度
+# CAPTCHA_LENGTH = 4
+# 超时时间 (验证码的有效期)
+CAPTCHA_TIMEOUT = 1

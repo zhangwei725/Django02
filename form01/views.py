@@ -25,4 +25,4 @@ def register(request):
         return redirect('success.html')
     else:
         user_form = UserModelForm()
-    return render(request, 'register.html', {'user_form': user_form})
+    return render(request, 'account/register.html', {'user_form': user_form})

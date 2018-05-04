@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="../../static/js/jquery-3.3.1.js"></script>
+    <script language="JavaScript">
+        $(function () {
+            let refres_url = 'http://127.0.0.1:8000/account/verify/';
+            $('.captcha').click(function () {
+                $.getJSON(refres_url, function (data) {
+                    $('.captcha').attr('src', data.img_url)
+                    $('#id_capt_0').val(data.haskey)
+
+                })
+            })
+        })
+    </script>
+
+
+</head>
+<body>
+{#/form/register/#}
+<form action="{% url 'reg' %}" method="post">
+
+    <input type="submit" value="提交">
+</form>
+</body>
+</html>

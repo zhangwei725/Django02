@@ -1,7 +1,7 @@
 import datetime
-
+#  认证  + 验证
 from django.http import HttpResponse
-from django.shortcuts import render
+from django.utils.deprecation import MiddlewareMixin
 
 # 这个是1.10以前的写法
 # class Middle1(object):
@@ -54,14 +54,7 @@ from django.shortcuts import render
 from middleware01.models import Ip
 
 
-class M01(MiddlewareMiMin):
-    def __init__(self, get_response):
-        self.get_response = get_response
-
-    def __call__(self, *args, **kwargs):
-        response = self.get_response
-
-        return response
+class M01(MiddlewareMixin):
 
     #
     def process_view(self, request, view_func, view_args, view_kwargs):
@@ -83,14 +76,7 @@ class M01(MiddlewareMiMin):
         return response
 
 
-class M02(object):
-    def __init__(self, get_response):
-        self.get_response = get_response
-
-    def __call__(self, *args, **kwargs):
-        response = self.get_response
-        return response
-
+class M02(MiddlewareMixin):
     def process_view(self, request, view_func, view_args, view_kwargs):
         print('M02------>view')
 
